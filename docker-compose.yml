@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: turing-world-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: turing_world_user
+      POSTGRES_PASSWORD: turing_world_pass
+      POSTGRES_DB: turing_world_db
+    ports:
+      - "55432:5432"
+    volumes:
+      - turing-world-pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: turing-world-redis
+    restart: always
+    ports:
+      - "56379:6379"
+
+  qdrant:
+    image: qdrant/qdrant
+    container_name: turing-world-qdrant
+    restart: always
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+
+volumes:
+  turing-world-pgdata:

@@ -1,0 +1,35 @@
+# Core Framework
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy>=2.0
+asyncpg
+alembic
+
+# Redis & Celery
+redis
+celery
+
+# LLM, RAG, Embedding
+httpx
+openai
+qdrant-client
+sentence-transformers  # 可选本地Embedding
+langchain              # 可选，用于RAG逻辑
+
+# Pydantic Models
+pydantic>=2.0
+
+# Auth/JWT
+python-jose[cryptography]
+passlib[bcrypt]
+
+# Utility
+python-dotenv
+loguru
+
+# Testing
+pytest
+pytest-asyncio
+httpx[http2]
