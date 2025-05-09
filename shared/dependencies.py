@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
-from app.shared.db import engine
-from app.shared.db import Base  # 用于创建表结构
+from shared.db import engine
+from shared.db import Base  # 用于创建表结构
 
 @asynccontextmanager
 async def lifespan_handler(app: FastAPI):

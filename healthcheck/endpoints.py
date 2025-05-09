@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.shared.db import redis_client, qdrant_client, get_db_session
+from shared.db import redis_client, qdrant_client, get_db_session
 from sqlalchemy import text
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession

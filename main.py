@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from config import settings
-from app.shared.dependencies import lifespan_handler
-from app.shared.routes import register_all_routes
+from shared.dependencies import lifespan_handler
+from shared.routes import register_all_routes
 
 app = FastAPI(
     title=settings.PROJECT_NAME,

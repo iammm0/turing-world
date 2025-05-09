@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.healthcheck import endpoints
+from healthcheck import endpoints
+
 
 def register_all_routes(app: FastAPI):
     app.include_router(endpoints.router)
